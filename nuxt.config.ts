@@ -8,4 +8,14 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
+  devServer: {
+    port: 3001,
+  },
+  vue: {
+    compilerOptions: {
+      isCustomElement: (tag) => {
+        return tag.startsWith("em-");
+      },
+    },
+  },
 });

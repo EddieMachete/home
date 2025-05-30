@@ -1,4 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+// import { useNuxtApp } from "#app";
+// const nuxtApp = useNuxtApp();
+
+// Loads custom elements only on client side
+if (process.client) {
+  import("eddiemachete-ui");
+}
+</script>
 
 <template>
   <div
@@ -10,7 +18,7 @@
     "
   >
     <h1>ROCK ON!!!</h1>
-    <Corna class="bouncing-corna" />
+    <em-corna class="bouncing-corna"></em-corna>
   </div>
 </template>
 
