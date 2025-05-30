@@ -1,4 +1,15 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+// import { useNuxtApp } from "#app";
+// const nuxtApp = useNuxtApp();
+
+// Loads custom elements only on client side
+// This is related to the `isCustomElement` check in `nuxt.config.ts`
+// We get errors loading custom elements on server side, because the HTMLElement api is not available
+// here we are loading the custom elements only on the client side
+if (process.client) {
+  import("eddiemachete-ui");
+}
+</script>
 
 <template>
   <div
@@ -10,7 +21,7 @@
     "
   >
     <h1>ROCK ON!!!</h1>
-    <Corna class="bouncing-corna" />
+    <em-corna class="bouncing-corna"></em-corna>
   </div>
 </template>
 
