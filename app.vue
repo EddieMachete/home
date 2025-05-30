@@ -3,6 +3,9 @@
 // const nuxtApp = useNuxtApp();
 
 // Loads custom elements only on client side
+// This is related to the `isCustomElement` check in `nuxt.config.ts`
+// We get errors loading custom elements on server side, because the HTMLElement api is not available
+// here we are loading the custom elements only on the client side
 if (process.client) {
   import("eddiemachete-ui");
 }
