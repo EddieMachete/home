@@ -14,22 +14,24 @@ if (process.client) {
 <template>
   <div
     style="
+      align-items: center;
       display: flex;
       flex-direction: column;
-      align-items: center;
       gap: 4rem;
     "
   >
-    <h1>ROCK ON!!!</h1>
+    <h1>Eddie Machete</h1>
     <em-corna class="bouncing-corna"></em-corna>
+    <div style="width: 100%; height: 400px"></div>
   </div>
 </template>
 
 <style>
 body {
   background-color: #970f00;
+  background-image: url("/svg/bg-text-tile.svg");
+  background-repeat: repeat;
   color: #fff;
-  font-family: "Times New Roman", serif;
   font-size: 2rem;
 }
 .bouncing-corna {
